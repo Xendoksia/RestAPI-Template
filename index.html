@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>API | Anasayfa </title>
+</head>
+<body>
+    <div class="navigation">
+        <div class="splusf">
+            <a href=""><img src="bilsoft_logo_1.png" style="width:40%; height:40% ; padding-left: 110px;padding-bottom: 50px;"></img></a>
+            <div class="search-box">
+                <button type="text" class="btn-search"><i class="fa fa-search" onkeyup="search()"></i></button>
+                <input id="myInput" type="Ara" class="input-search" onkeyup="search()" placeholder="Ara....">
+            </div>    
+        </div>
+        <ul id="myUL">
+            <!-- Buraya navigasyon menüsü öğelerinizi ekleyebilirsiniz -->
+
+            
+            <button class="dropdown-btn">E-Fatura İşlemleri:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+            <button class="dropdown-btn">Gelen E-fatura:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+            <button class="dropdown-btn">Giden E-fatura:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+            <button class="dropdown-btn">FaturaApi:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+
+            <button class="dropdown-btn">BankaApi:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+                
+            </div>
+
+            <button class="dropdown-btn">CariApi:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+
+            <button class="dropdown-btn">KasaApi:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+
+            <button class="dropdown-btn">StokApi:
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+                <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+            </div>
+            
+        </ul>
+        </div>
+
+    </div>  
+    <div class="main">
+        <!-- Buraya sayfa içeriğinizi ekleyebilirsiniz --> <!--MAİN PAGE PART -->
+        <h1 class="mainhead">Hoş Geldiniz!</h1>
+        <h1 class="mainhead">API Dökümanı</h1>
+      
+        <div>
+           
+            <div class="mainpara">
+                <P>• API ile kullanılabilir hizmetlere doküman üzerinden ulaşabilirsiniz.
+                <br><br>• API servisine gönderilebilir istekleri ve servisten tarafınıza dönen örnek yanıtları inceleyebilirsiniz.
+                <br><br>• Örnek kodlamalara ulaşabilirsiniz.
+       
+                </P>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    </div>
+    <script>
+        function search() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 || li[i].className.indexOf("alwaysshow") > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+            
+            // Dropdown açma/kapama işlemi
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            for (i = 0; i < dropdown.length; i++) {
+                var dropdownContent = dropdown[i].nextElementSibling;
+                if (dropdownContent) {
+                    if (filter.length > 0) {
+                        dropdownContent.style.display = "block";
+                    } else {
+                        dropdownContent.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+    </script>
+    
+   
+</body>
+</html>

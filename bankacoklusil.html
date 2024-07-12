@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    
+    <title>API | Banka Çoklu Sil</title> <!-- SAYFA BAŞLIKLARI-->
+</head>
+<body id="home">
+    <div class="navigation">
+        <div class="splusf">
+            <a href=""><img src="bilsoft_logo_1.png" style="width:40%; height:40% ; padding-left: 110px;padding-bottom: 50px;"></img></a>
+            <div class="search-box">
+                <button class="btn-search"><i class="fa fa-search"></i></button>
+                <input id="myInput" type="Ara" class="input-search" onkeyup="search()" placeholder="Ara....">
+            </div>    
+        </div>
+        <ul id="myUL">
+          <!-- Buraya navigasyon menüsü öğelerinizi ekleyebilirsiniz -->
+          <a style="font-size:40px; color:white;" href="index.html"><img id="homee" src="home.svg"></a>
+
+          <button class="dropdown-btn">E-Fatura İşlemleri:
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+          </div>
+          <button class="dropdown-btn">Gelen E-fatura:
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+          </div>
+          <button class="dropdown-btn">Giden E-fatura:
+              <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+          </div>
+
+          <button class="dropdown-btn">FaturaApi:
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+        </div>
+
+        <button class="dropdown-btn">BankaApi:
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+        </div>
+
+        <button class="dropdown-btn">CariApi:
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+        </div>
+
+        <button class="dropdown-btn">KasaApi:
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+        </div>
+
+        <button class="dropdown-btn">StokApi:
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <li><a href="bankacoklusil.html">BankaCokluSil</a></li> 
+        </div>
+          
+      </ul>
+        </div>
+
+    </div>
+  
+    <div style="width:50%; margin-top: 100px;">
+        <h1 class="head">Banka Çoklu Sil</h1>
+  
+        <div style="width: 50%;padding-left:50%;margin-top: 70px;">
+            <table > 
+                <tr style="border-right: none;">
+                    <th style="text-align: center;">Method</th>
+                    <th style="text-align: center;">Endpoint</th>
+                    <th style="text-align: center;">Method Name</th>
+                
+                </tr>
+                <tr style="border: 1px solid black; text-align: center;"> 
+                    <td>POST</td> 
+                    <td>S</td>   
+                    <td>BankaCokluSil</td>
+                 
+                </tr>
+            </table>
+        </div>
+        <h1 style="color: rgb(88, 88, 88); padding-left:55%;padding-top: 90px;">REQUEST</h1>
+        <div style="width: 100%; padding-left: 70%;padding-bottom: 50px;">
+            <pre>
+                <span>
+                    <button class="copyclick" onclick="CopyToClipboard('request');return false;"><img src="copy.svg"></button>
+                
+                    <code id="request" style="padding-left:40%;">
+
+                       EXAMPLE CODING::
+
+
+                          &lt;soap:Header&gt;
+                            &lt;AutHeader xmlns=&quot;http://tempuri.org/&quot;&gt;
+                              &lt;Donem&gt;string&lt;/Donem&gt;
+                              &lt;VergiNo&gt;string&lt;/VergiNo&gt;
+                              &lt;VeritabaniAd&gt;string&lt;/VeritabaniAd&gt;
+                              &lt;KullaniciAdi&gt;string&lt;/KullaniciAdi&gt;
+                              &lt;Sifre&gt;string&lt;/Sifre&gt;
+                              &lt;Sube&gt;string&lt;/Sube&gt;
+                              &lt;IpAdresi&gt;string&lt;/IpAdresi&gt;
+                              &lt;MacAdresi&gt;string&lt;/MacAdresi&gt;
+                            &lt;/AutHeader&gt;
+                          &lt;/soap:Header&gt;
+                          &lt;soap:Body&gt;
+                            &lt;BankaCokluSil xmlns=&quot;http://tempuri.org/&quot;&gt;
+                              &lt;bankaIds&gt;
+                                &lt;int&gt;int&lt;/int&gt;
+                                &lt;int&gt;int&lt;/int&gt;
+                              &lt;/bankaIds&gt;
+                            &lt;/BankaCokluSil&gt;
+                          &lt;/soap:Body&gt;
+                        &lt;/soap:Envelope&gt;
+            
+                    </code>
+                </span>
+            </pre>
+        </div>
+        <h1 style="color: rgb(88, 88, 88); padding-left:55%;">RESPONSE</h1>
+        <div style="width: 100%; padding-left: 70%;padding-bottom: 70px;">
+            <pre>
+                <span>
+                    <button class="copyclick" onclick="CopyToClipboard('response');return false;"><img src="copy.svg"></button>
+                    <code id="response" style="padding-left:40%;">         
+                       
+                            &lt;BankaCokluSilResponse xmlns=&quot;http://tempuri.org/&quot;&gt;
+                              &lt;BankaCokluSilResult&gt;
+                                &lt;basariliMi&gt;boolean&lt;/basariliMi&gt;
+                                &lt;mesaj&gt;string&lt;/mesaj&gt;
+                                &lt;veri /&gt;
+                                &lt;efaturaNo&gt;string&lt;/efaturaNo&gt;
+                                &lt;efaturaId&gt;string&lt;/efaturaId&gt;
+                                &lt;efaturaSenaryo&gt;string&lt;/efaturaSenaryo&gt;
+                                &lt;fisNo&gt;int&lt;/fisNo&gt;
+                                &lt;evrakNo&gt;string&lt;/evrakNo&gt;
+                                &lt;efaturaDurum&gt;string&lt;/efaturaDurum&gt;
+                              &lt;/BankaCokluSilResult&gt;
+                            &lt;/BankaCokluSilResponse&gt;
+                          &lt;/soap:Body&gt;
+                        &lt;/soap:Envelope&gt;
+
+
+                    </code>
+                </span>
+            </pre>
+        </div>
+        <h1 style="color: rgb(88, 88, 88); padding-left:55%;">REQUIRED</h1>
+        <div style="width: 100%; padding-left: 70%;padding-bottom: 40px;">
+            <pre>
+                <span>
+                    <button class="copyclick" onclick="CopyToClipboard('zorunlu');return false;"><img src="copy.svg"></button>
+                    <code id="zorunlu" style="padding-left:40%;">
+                    {
+                        <!-- REQUEST KODU BURAYA-->
+                
+                    }
+            
+                    </code>
+                </span>
+            </pre>
+        </div>
+    </div>
+    <script>
+      function search() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+              a = li[i].getElementsByTagName("a")[0];
+              txtValue = a.textContent || a.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1 || li[i].className.indexOf("alwaysshow") > -1) {
+                  li[i].style.display = "";
+              } else {
+                  li[i].style.display = "none";
+              }
+          }
+          
+          // Dropdown açma/kapama işlemi
+          var dropdown = document.getElementsByClassName("dropdown-btn");
+          for (i = 0; i < dropdown.length; i++) {
+              var dropdownContent = dropdown[i].nextElementSibling;
+              if (dropdownContent) {
+                  if (filter.length > 0) {
+                      dropdownContent.style.display = "block";
+                  } else {
+                      dropdownContent.style.display = "none";
+                  }
+              }
+          }
+      }
+  </script>
+  
+  <script>
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+      var i;
+      
+      for (i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var dropdownContent = this.nextElementSibling;
+          if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+          } else {
+            dropdownContent.style.display = "block";
+          }
+        });
+      }
+  </script>
+ 
+    
+    <script>
+        function police() {
+            alert("Başarıyla Kopyalandı!");
+        }
+        function CopyToClipboard(id)
+        {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        police()
+        }
+    </script>
+    
+   
+</body>
+</html>

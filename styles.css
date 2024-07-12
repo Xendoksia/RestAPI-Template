@@ -1,0 +1,286 @@
+/* Temel sayfa stili */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    font-family: "Lato", sans-serif;      
+}
+
+/* Sol taraftaki navigasyon çubuğu stili */
+#myUL {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+#homee {
+  padding-bottom: 40px;
+  padding-right: 40px;
+  width: 35px;
+  height: 35px;
+}
+
+#homee:hover {
+  width: 37px;
+  height: 37px;
+}
+
+.splusf {
+  top: -20px;
+  padding: 10px 0px;
+  margin: 0;
+  padding: 0;
+  background:none ;
+  position: sticky;
+
+  background-color: #252525;
+  width: 100%;
+  margin: auto;
+}
+.navigation {
+  background-color: transparent;
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #252525;
+  overflow-x: hidden;
+  padding-top: 20px;
+  
+}
+
+span { 
+  top: 0;
+  padding-left: 30%
+}
+
+li {
+  list-style-type: none;
+}
+
+li a, .dropdown-btn {
+    margin-bottom:10px ;
+    padding: 20px 50px 10px 50px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width:100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  
+  /* On mouse-over */
+  li a:hover, .dropdown-btn:hover {
+    color: #f1f1f1;
+    background-color: orange;
+    border-radius: 100px;
+    transition: 0.1s;
+
+  }
+  
+  li a:active {
+    color: #f1f1f1;
+    background-color: orange;
+    border-radius: 100px;
+  }
+/* Main content */
+.main {
+  width: 65%;
+  margin-right: 10%;
+  margin-top: 5%;
+  text-align: center;
+
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+
+
+.dropdown-container {
+  display: none;
+  background-color: #2c2c2c;
+  padding-left: 8px;
+  
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+/* Arama çubuğu stili */
+
+.box{
+    position: relative;
+}
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    
+  }
+  .input-search{
+    
+    height: 50px;
+    width: 300px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color:#262626 ;
+    padding-right: 40px;
+    color:#fff;
+    border-bottom:1px solid rgba(255,255,255,.5);
+  }
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+    
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+  /*------------*/
+  
+  .mainpara {
+    width: 100%;
+    padding-left: 45%;
+    margin-top: 5%;
+    font-size: 15px;
+    font-family: 'Courier New', monospace;
+    text-align: left;
+}
+
+.mainhead {
+    padding-left: 40%;
+    text-align: center;
+    width: 100%;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: rgb(78, 78, 78);
+}
+
+.active {
+    background-color: #22a6b3;
+    color: white;
+}
+
+/*ORTA TABLO REQUEST RESPONSE */
+
+table, td {
+  border: 1px solid rgba(167, 167, 167, 0.589);
+  border-collapse: collapse;
+  width: 270%;
+  height: 100px;
+  padding: 20px;
+  vertical-align: center;
+  box-sizing: border-box;
+  table-layout: fixed;
+  overflow-x: initial;
+  overflow-wrap: break-word;
+  
+}
+th {
+  padding: 14px;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', sans-serif; 
+  border-right: none;
+  border-collapse: collapse;
+  color: #747474;
+  width: 10%;
+  height: 50%;
+}
+tr:nth-child(odd) {
+  background-color: #e9e7e7f3;
+}
+pre {
+  color: white;
+  margin: 2rem 0;
+  background: #38424D;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  line-height: 1.15;
+  font-size: 1rem;
+  overflow-x: scroll;
+}
+code, kbd, pre, samp {
+  font-family: "Inconsolata", monospace;
+}
+
+.copyclick {
+  margin-left:  30%;
+}
+
+td a {
+  font-style: italic;
+  font-size: 20px;
+  text-decoration: none;
+  color: rgb(231, 152, 3);
+}
+.active {
+  background-color: #666;
+  color: white;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #111;
+  cursor: pointer;
+}
+
+.head {
+  font-family: 'Trebuchet MS', sans-serif; 
+  text-align: center; 
+  padding-left: 93% ;
+  padding-bottom: 50px;
+  width: 50%;
+  color: #505050;
+}
